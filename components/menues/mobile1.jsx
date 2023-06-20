@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
-import Logo from "../../assets/logoDark.svg";
+import Logo from "../../assets/LogoDark.svg";
 import { GrClose } from "react-icons/gr";
 import { useRouter } from "next/router";
 
