@@ -164,7 +164,7 @@ export default function Home() {
                     </div>
                     {eisImg.map((e, i) => {
                         return (
-                            <div className="col-span-6 lg:col-span-3">
+                            <div key={`eis${i}`} className="col-span-6 lg:col-span-3">
                                 <img src={e.src} alt="" />
                             </div>
                         );
@@ -177,7 +177,10 @@ export default function Home() {
                         <div className="flex flex-col flex-wrap lg:max-h-[420px] xl:max-h-[520px]">
                             {milcheis.map((e, i) => {
                                 return (
-                                    <div className="eis text-base xl:text-lg text-secondaryColor-900 font-pantonsemibold mb-2">
+                                    <div
+                                        key={`milch${i}`}
+                                        className="eis text-base xl:text-lg text-secondaryColor-900 font-pantonsemibold mb-2"
+                                    >
                                         {e}
                                     </div>
                                 );
@@ -193,7 +196,10 @@ export default function Home() {
                         <div className="flex flex-col flex-wrap xl:max-h-[5200px]">
                             {fruchteis.map((e, i) => {
                                 return (
-                                    <div className="eis text-base xl:text-lg text-secondaryColor-900 font-pantonsemibold mb-2">
+                                    <div
+                                        key={`frucht${i}`}
+                                        className="eis text-base xl:text-lg text-secondaryColor-900 font-pantonsemibold mb-2"
+                                    >
                                         {e}
                                     </div>
                                 );
@@ -274,7 +280,7 @@ export default function Home() {
                 </div>
                 {kuchen.map((e, i) => {
                     return (
-                        <div className="col-span-6 lg:col-span-3">
+                        <div key={`kuchen${i}`} className="col-span-6 lg:col-span-3">
                             <img src={e.src} alt="" />
                         </div>
                     );
@@ -297,7 +303,7 @@ export default function Home() {
                 </div>
                 {cafe.map((e, i) => {
                     return (
-                        <div className="col-span-6 lg:col-span-3">
+                        <div key={`cafe${i}`} className="col-span-6 lg:col-span-3">
                             <img src={e.src} alt="" />
                         </div>
                     );
@@ -321,14 +327,14 @@ export default function Home() {
                 </div>
                 {snacks.map((e, i) => {
                     return (
-                        <div className="col-span-6 lg:col-span-3 hidden lg:block">
+                        <div key={`snacks${i}`} className="col-span-6 lg:col-span-3 hidden lg:block">
                             <img src={e.src} alt="" />
                         </div>
                     );
                 })}
                 {snacks.slice(1, 3).map((e, i) => {
                     return (
-                        <div className="col-span-6 lg:col-span-3  lg:hidden">
+                        <div key={`snackMobile${i}`} className="col-span-6 lg:col-span-3  lg:hidden">
                             <img src={e.src} alt="" />
                         </div>
                     );
