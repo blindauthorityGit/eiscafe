@@ -8,7 +8,7 @@ import { Menu1 } from "../components/menues";
 import Swipo from "../components/swiper";
 import Link from "next/link";
 //ASSETS
-import LogoLight from "../assets/LogoDark.svg";
+import LogoLight from "../assets/LogoLight.svg";
 import LogoDark from "../assets/LogoDark.svg";
 import Eiscafe1 from "../assets/eiscafe.jpg";
 import Eis1 from "../assets/eis1.jpg";
