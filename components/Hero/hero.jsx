@@ -66,19 +66,16 @@ const Hero = (props) => {
                 {/* Background Image */}
                 {/* Background Video */}
                 <div className="container mx-auto grid grid-cols-12 h-full">
-                    <div className="col-span-8 relative flex items-center">
+                    <div className="col-span-8 relative flex flex-col justify-center items-center">
                         <h1 className="text-white  text-3xl xl:text-6xl leading-tight tracking-wide font-pantonbold">
                             Das Eiscafé im Herzen der Dreieichenhainer Altstadt{" "}
                         </h1>
                         {/* <h3 className="mt-2 sm:mt-4 lg:mt-2 xl:mt-4 text-primaryColor-200">{props.data.subtitle}</h3>
                     
                     <h6 className="mt-2 sm:mt-4 lg:mt-2 xl:mt-4 text-primaryColor-200">{props.data.subsubtitle}</h6> */}
-                        <div className="lg:hidden block bottom-24 absolute">
+                        <div className="lg:hidden block ">
                             <Link href="/#eis">
-                                <MainButton ghost={true}>Unser Eis</MainButton>
-                            </Link>
-                            <Link href="/#kontakt">
-                                <MainButton>Kontakt</MainButton>
+                                <MainButton ghost={false}>Unser Eis</MainButton>
                             </Link>
                         </div>
                     </div>
