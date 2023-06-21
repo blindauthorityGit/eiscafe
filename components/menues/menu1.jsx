@@ -167,7 +167,7 @@ const Menu1 = (props) => {
                         <Link className="flex" href="/">
                             <img
                                 src={isScrolled ? props.logoDark : props.logoLight}
-                                className="absolute top-0 max-h-[1.75rem] sm:max-h-[3.75rem] lg:max-h-[8.05rem] fill-current-[#fff]"
+                                className="absolute top-0 max-h-[4.75rem] sm:max-h-[3.75rem] lg:max-h-[8.05rem] fill-current-[#fff]"
                                 alt="Logo"
                                 ref={logoRef}
                             />
@@ -237,7 +237,7 @@ const Menu1 = (props) => {
                     <div className="col-span-1 social media flex justify-end text-xl md:text-4xl">
                         <div
                             className={`block lg:hidden cursor-pointer ${
-                                isScrolled ? "text-darkText" : "text-primaryColor-100"
+                                isScrolled ? "text-darkText" : "text-primaryColor-800"
                             }`}
                             onClick={(e) => {
                                 setShowOverlay(true);

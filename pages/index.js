@@ -1,4 +1,5 @@
 import Head from "next/head";
+
 import { useEffect } from "react";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -32,6 +33,7 @@ import Torte6 from "../assets/torte6.jpg";
 import Snack1 from "../assets/snack1.jpg";
 import Snack2 from "../assets/snack2.jpg";
 import Hundeeis from "../assets/hundeeis.png";
+import Favicon from "../assets/favicon.svg";
 
 import Eisdeko from "../assets/eisdeko.png";
 // import Eiscafe2 from "../assets/eiscafe2.jpg";
@@ -91,12 +93,56 @@ export default function Home() {
 
     useEffect(() => {
         console.log(slider1Img);
+        // Select all anchor links with a hash in the href attribute
+        const anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+        // Add a click event listener to each anchor link
+        anchorLinks.forEach((link) => {
+            console.log(link);
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+
+                // Get the target element's ID from the href attribute
+                const targetId = link.getAttribute("href").substring(1);
+
+                // Get the target element
+                const targetElement = document.getElementById(targetId);
+
+                // Calculate the offset based on the desired margin
+                const offset = 50; // Adjust this value as needed
+
+                // Scroll to the target element with an offset
+                window.scrollTo({
+                    top: targetElement.offsetTop - offset,
+                    behavior: "smooth",
+                });
+            });
+        });
     }, []);
 
     return (
         <MainContainer width="max-w-[100%]">
             <Head>
-                <title>Site title</title>
+                <title>Eiscafe Altstadt</title>
+                <meta
+                    name="description"
+                    content="Unser Eiscafé im Herzen der malerischen Dreieichenhainer Altstadt ist eines der ältesten Eiscafés im ganzen Gebiet. 2019 ist das Eiscafé bereits 50 Jahre am Ort."
+                />
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <link rel="icon" href={Favicon.src} />
+                <meta property="og:title" content="Eiscafe Altstadt" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.eiscafealtstadt.de" />
+                {/* <meta
+                    property="og:image"
+                    content={dataHome.seo.advancedSEO.ogImage ? urlFor(dataHome.seo.advancedSEO.ogImage) : null}
+                /> */}
+                <meta
+                    property="og:description"
+                    content="Unser Eiscafé im Herzen der malerischen Dreieichenhainer Altstadt ist eines der ältesten Eiscafés im ganzen Gebiet. 2019 ist das Eiscafé bereits 50 Jahre am Ort."
+                />
+                <meta property="og:site_name" content="Eiscafe Altstadt Dreieich" />
+                <meta property="og:locale" content="de_DE" />
             </Head>
             <Menu1
                 logoLight={LogoLight.src}
@@ -410,11 +456,11 @@ export default function Home() {
             </div>
             {/* SECTION 4 */}
             <div className="w-full col-span-12 bg-secondaryColor">
-                <div className="col-span-12 container mx-auto grid grid-cols-12  gap-12 relative mt-16 mb-16">
-                    <Link className="hover:text-red-500 font-semibold" href="/impressum">
+                <div className="col-span-12 container mx-auto flex justify-center  gap-12 relative mt-16 mb-16">
+                    <Link className="hover:text-primaryColor-800 font-pantonsemibold" href="/impressum">
                         Impressum
                     </Link>{" "}
-                    <Link className="hover:text-red-500 font-semibold" href="datenschutz">
+                    <Link className="hover:text-primaryColor-800 font-pantonsemibold" href="datenschutz">
                         Datenschutz
                     </Link>
                 </div>

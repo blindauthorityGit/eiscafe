@@ -94,24 +94,26 @@ const Mobile1 = (props) => {
                 <div className="container h-screen pt-12 px-8 font-europa tracking-widest">
                     <div className="middle flex justify-start">
                         <Link href="/">
-                            <a>
-                                <img src={Logo.src} width="140" alt="Logo" />
-                            </a>
+                            <img src={Logo.src} width="140" alt="Logo" />
                         </Link>
                     </div>
                     <div className="MenuItems text-xl sm:text-4xl pt-12 font-barlow">
-                        <Link href="/baeckerei">
-                            <a className="text-text block my-3 subNav relative mt-4 hover:text-primaryColor cursor-pointer">
-                                Bäckerei
-                            </a>
+                        <Link
+                            onClick={props.onClick}
+                            href="/#cafe"
+                            className="text-text block my-3 subNav relative mt-4 hover:text-primaryColor cursor-pointer"
+                        >
+                            Das Cafe
                         </Link>
                         <motion.ul variants={boxMotion} className="">
                             <motion.li variants={textMotion} className="mb-4">
                                 <div className="wrap dropdown text-primaryColor-900  ">
-                                    <Link href="/denise">
-                                        <a className="text-text block my-5 subNav relative hover:text-primaryColor cursor-pointer">
-                                            Denise
-                                        </a>
+                                    <Link
+                                        onClick={props.onClick}
+                                        className="text-text block my-5 subNav relative hover:text-primaryColor cursor-pointer"
+                                        href="/#eis"
+                                    >
+                                        Unser Eis
                                     </Link>
 
                                     {/* <ul className="pl-8 mt-4 mb-4 text-primaryColor-900">
@@ -133,14 +135,23 @@ const Mobile1 = (props) => {
                                     </ul> */}
                                 </div>
                             </motion.li>
-                            <Link href="/weingebaeck">
-                                <a className="text-text block my-5 subNav relative mt-4 hover:text-primaryColor cursor-pointer">
-                                    Weingebäck
-                                </a>
+                            <Link
+                                onClick={props.onClick}
+                                href="/#hundeeis"
+                                className="text-text block my-5 subNav relative mt-4 hover:text-primaryColor cursor-pointer"
+                            >
+                                Hundeeis
+                            </Link>
+                            <Link
+                                onClick={props.onClick}
+                                href="/#eistorten"
+                                className="text-text block my-5 subNav relative mt-4 hover:text-primaryColor cursor-pointer"
+                            >
+                                Eistorten
                             </Link>
                             <li className="mr-8 hover:text-primaryColor hover:underline mb-4 text-primaryColor-900">
-                                <Link href="/kontakt">
-                                    <a>Kontakt</a>
+                                <Link href="/#kontakt" onClick={props.onClick}>
+                                    Kontakt
                                 </Link>
                             </li>
                         </motion.ul>
@@ -148,16 +159,18 @@ const Mobile1 = (props) => {
                         <ul className="tracking-widest text-primaryColor-900">
                             <li className="mb-3 mt-8 text-xs">
                                 <div className="wrap dropdown   ">
-                                    <Link href="/impressum">
-                                        <a className="text-text block my-4 subNav relative hover:text-primaryColor cursor-pointer">
-                                            Impressum
-                                        </a>
+                                    <Link
+                                        href="/impressum"
+                                        className="text-text block my-4 subNav relative hover:text-primaryColor cursor-pointer"
+                                    >
+                                        Impressum
                                     </Link>
 
-                                    <Link href="/datenschutz">
-                                        <a className="text-text block my-4 subNav relative mt-4 hover:text-primaryColor cursor-pointer">
-                                            Datenschutzerklärung
-                                        </a>
+                                    <Link
+                                        href="/datenschutz"
+                                        className="text-text block my-4 subNav relative mt-4 hover:text-primaryColor cursor-pointer"
+                                    >
+                                        Datenschutzerklärung
                                     </Link>
                                 </div>
                             </li>

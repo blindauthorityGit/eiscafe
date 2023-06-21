@@ -66,22 +66,22 @@ const Hero = (props) => {
                 {/* Background Image */}
                 {/* Background Video */}
                 <div className="container mx-auto grid grid-cols-12 h-full">
-                    <Parallax className="col-span-8 relative" translateY={["-200px", "200px"]}>
-                        <h1 className="text-white absolute bottom-48 text-3xl xl:text-6xl leading-tight tracking-wide font-pantonbold">
+                    <div className="col-span-8 relative">
+                        <h1 className="text-white absolute bottom-64 text-3xl xl:text-6xl leading-tight tracking-wide font-pantonbold">
                             Das Eiscafé im Herzen der Dreieichenhainer Altstadt{" "}
                         </h1>
                         {/* <h3 className="mt-2 sm:mt-4 lg:mt-2 xl:mt-4 text-primaryColor-200">{props.data.subtitle}</h3>
                     
                     <h6 className="mt-2 sm:mt-4 lg:mt-2 xl:mt-4 text-primaryColor-200">{props.data.subsubtitle}</h6> */}
-                        <div className="lg:flex hidden  space-x-6">
+                        <div className="lg:hidden block bottom-16 absolute">
                             <Link href="/#eis">
-                                <MainButton ghost={true}>Mehr</MainButton>
+                                <MainButton ghost={true}>Unser Eis</MainButton>
                             </Link>
                             <Link href="/#kontakt">
-                                <MainButton>Mehr</MainButton>
+                                <MainButton>Kontakt</MainButton>
                             </Link>
                         </div>
-                    </Parallax>
+                    </div>
                 </div>
                 {/* <div className="h-full sm:h-full w-full bg-[#3b3720] opacity-60 absolute"></div> */}
                 {/* {!loaded && <Spinner1></Spinner1>} */} <FloaterOpening></FloaterOpening>
