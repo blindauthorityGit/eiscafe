@@ -256,7 +256,7 @@ export default function Home() {
                         <img src={Eisdeko.src} alt="" />
                     </div>
                     <div className="col-span-8 lg:col-span-4 relative mt-8">
-                        <div className="absolute left-[200px] xl:left-[300px]">
+                        <div className="absolute left-[150px] xl:left-[300px]">
                             <div className="kreis w-24 h-24 xl:h-32 xl:w-32 rounded-full bg-primaryColor-400 font-pantonblack text-3xl text-white flex justify-center items-center ">
                                 NEU
                             </div>
