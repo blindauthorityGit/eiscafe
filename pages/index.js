@@ -157,8 +157,8 @@ export default function Home() {
             ></Menu1>
             <div className="w-full col-span-12 relative">
                 <Hero fullHeight={true} colspan="col-span-12"></Hero>
-                <div className="absolute h-full bg-primaryColor-400 w-2/4 top-0 z-[-1]"></div>
-                <div className="absolute h-full bg-secondaryColor-400 w-2/4 right-0 top-0 z-[-1]"></div>
+                <div className="absolute hidden lg:block h-full bg-primaryColor-400 w-2/4 top-0 z-[-1]"></div>
+                <div className="absolute hidden lg:block h-full bg-secondaryColor-400 w-2/4 right-0 top-0 z-[-1]"></div>
             </div>
 
             <div className="w-full col-span-12 relative h-full overflow-hidden" id="cafe">
