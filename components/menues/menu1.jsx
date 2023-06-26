@@ -167,7 +167,11 @@ const Menu1 = (props) => {
                         <Link className="flex" href="/">
                             <img
                                 src={isScrolled ? props.logoDark : props.logoLight}
-                                className="absolute top-0 max-h-[4.75rem] sm:max-h-[3.75rem] lg:max-h-[8.05rem] fill-current-[#fff]"
+                                className={`absolute top-0 ${
+                                    isScrolled
+                                        ? "max-h-[3rem] lg:max-h-[3.75rem]"
+                                        : " max-h-[4.75rem] sm:max-h-[3.75rem] lg:max-h-[8.05rem]"
+                                }  fill-current-[#fff] transition-all  duration-500`}
                                 alt="Logo"
                                 ref={logoRef}
                             />

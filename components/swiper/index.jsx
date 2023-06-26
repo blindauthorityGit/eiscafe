@@ -79,7 +79,7 @@ const Swipo = (props) => {
                                     <SwiperSlide key={`sliderKey${i}`} layoutId="hero" transition={{ duration: 0.5 }}>
                                         <motion.div
                                             // style={{ boxShadow: "var(--shadow-elevation-high)" }}
-                                            className={` border-white h-full  relative transition-all ${
+                                            className={` border-white  h-full  relative transition-all ${
                                                 clicked ? "scale-[0.975]" : ""
                                             }`}
                                             data-swiper-parallax="100"

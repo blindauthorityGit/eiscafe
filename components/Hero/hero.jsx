@@ -11,7 +11,7 @@ import useBreakpoints from "../functions/useBreakpoints";
 
 //ASSETS
 import HeroBG from "../../assets/heroBG.svg";
-import HeroMobileBG from "../../assets/heroMobileBG.svg";
+import HeroMobileBG from "../../assets/mobileBG.jpg";
 
 const Hero = (props) => {
     const [loaded, setLoaded] = useState(false);
@@ -58,7 +58,7 @@ const Hero = (props) => {
             </div>
 
             <div
-                className={`hero-container block lg:hidden bg-cover px-8 bg-no-repeat  w-full max-w-[1920px] max-h-[1080px] mx-auto h-full relative ${
+                className={`hero-container block lg:hidden bg-cover bg-bottom px-8 bg-no-repeat  w-full max-w-[1920px] max-h-[1080px] mx-auto h-full relative ${
                     props.fullHeight ? "h-screen" : props.height
                 } ${props.colspan}`}
                 style={{ backgroundImage: `url(${HeroMobileBG.src})` }}

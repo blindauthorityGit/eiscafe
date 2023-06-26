@@ -33,6 +33,9 @@ import Torte6 from "../assets/torte6.jpg";
 import Snack1 from "../assets/snack1.jpg";
 import Snack2 from "../assets/snack2.jpg";
 import Hundeeis from "../assets/hundeeis.png";
+import HundeeisBanana from "../assets/hundeeisBanana.png";
+import HundeeisLeberwurst from "../assets/hundeeisLeberwurst.png";
+import Hund from "../assets/hund.png";
 import Favicon from "../assets/favicon.svg";
 
 import Eisdeko from "../assets/eisdeko.png";
@@ -252,27 +255,50 @@ export default function Home() {
                             })}
                         </div>
                     </div>
-                    <div className="absolute lg:w-[100%] lg:right-[-24rem] xl:right-[-36rem] bottom-[20%] right-[-50%] lg:bottom-[12rem] xl:bottom-[16rem]">
+                    <div className="absolute lg:w-[100%] lg:right-[-24rem] xl:right-[-36rem] top-[20%] right-[-50%] lg:top-[25%] xl:top-[28%]">
                         <img src={Eisdeko.src} alt="" />
                     </div>
-                    <div className="col-span-8 lg:col-span-4 relative mt-8">
+                    {/* <div className="col-span-8 lg:col-span-4 relative mt-8">
                         <div className="absolute left-[150px] xl:left-[300px]">
                             <div className="kreis w-24 h-24 xl:h-32 xl:w-32 rounded-full bg-primaryColor-400 font-pantonblack text-3xl text-white flex justify-center items-center ">
                                 NEU
                             </div>
                         </div>
                         <img src={Hundeeis.src} alt="" />
-                    </div>
-                    <div className="col-span-12 lg:col-span-8 relative flex flex-col justify-center" id="hundeeis">
+                    </div> */}
+                    <div
+                        className="col-span-12 lg:col-span-6 mt-16 lg:mt-36 relative flex flex-col justify-center relative"
+                        id="hundeeis"
+                    >
                         <h2 className="text-primaryColor-400 mb-2 text-4xl xl:text-4xl leading-tight tracking-wide font-pantonblack">
                             Hundeeis
                         </h2>
-                        <p className="font-pantonsemibold lg:text-base xl:text-xl text-secondaryColor-700 tracking-wide mb-8">
-                            Verwöhne deinen besten Freund mit dem coolsten Genuss! <br />
-                            <br />
-                            Jetzt erhältlich: <br />
-                            Hundeeis, das ultimative Leckerchen für heiße Pfoten
+                        <p className="font-pantonbold mt-4 lg:text-base xl:text-xl text-secondaryColor-700 tracking-wide mb-8">
+                            Entdecken Sie unsere einzigartigen Hunde-Eissorten im malerischen Altstadt-Eiscafé von
+                            Dreieichenhain.
                         </p>
+                        <p className="font-pantonsemibold mt-4 lg:text-base xl:text-xl text-secondaryColor-700 tracking-wide mb-8">
+                            Wir haben spezielles Hunde-Eis entwickelt, inspiriert von unserer Liebe zu Hunden und
+                            unserem eigenen Vierbeiner. Unsere köstlichen Kreationen enthalten frische Früchte wie
+                            Bananen und Beeren sowie hochwertigen Joghurt und natürliche pflanzliche Milchalternativen
+                            wie Kokosmilch. Jede Sorte ist nicht nur sicher für Hunde, sondern auch eine gesunde
+                            Ergänzung zu ihrer normalen Ernährung.
+                        </p>
+                        <p className="font-pantonsemibold mt-4 lg:text-base xl:text-xl text-secondaryColor-700 tracking-wide mb-8">
+                            Probieren Sie unsere ersten beiden Sorten <strong>Banana Wuff</strong> und
+                            <strong>Leberwurst Traum.</strong> Besuchen Sie uns und lassen Sie Ihren Hund die wunderbare
+                            Welt des Hunde-Eises entdecken.
+                        </p>
+                        <p className="font-pantonsemibold mt-4 lg:text-base xl:text-xl text-secondaryColor-700 tracking-wide mb-8">
+                            Genießen Sie gemeinsam den Sommer mit unserem köstlichen und erfrischenden Hunde-Eis!
+                        </p>
+                    </div>
+                    <div className="col-span-8 lg:col-span-12 relative lg:flex mt-8">
+                        <img src={HundeeisBanana.src} alt="" />
+                        <img src={HundeeisLeberwurst.src} alt="" />
+                    </div>
+                    <div className="absolute xl:flex justify-end hidden lg:w-[100%] lg:right-[-24rem] xl:right-[0rem] bottom-[20%] right-[-40%] lg:bottom-[12rem] xl:bottom-[-5%]">
+                        <img src={Hund.src} alt="" />
                     </div>
                 </div>
             </div>
