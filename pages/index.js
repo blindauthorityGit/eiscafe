@@ -75,8 +75,8 @@ export default function Home() {
         "OMA'S STREUSELKUCHEN",
         "MR. NICO / SALTY PEANUT (ERDNUSS)",
         "SAUERKIRSCH-JOGHURT",
-        "JOGHURETTE#",
-        "MOZART#",
+        "JOGHURETTE*",
+        "MOZART*",
         "PINO PINGUIN SCHOKOLADE",
     ];
     const fruchteis = [
