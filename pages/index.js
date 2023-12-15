@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import MainContainer from "../components/layout/mainContainer";
@@ -44,7 +44,11 @@ import { menuItems, socialMedia } from "../components/menues/config";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { BsTelephoneFill } from "react-icons/bs";
 
+import { Modal } from "../components/modal";
+
 export default function Home() {
+    const [showModal, setShowModal] = useState(true);
+
     const slider1Img = [Eiscafe1];
     const eisImg = [Eis1, Eis2, Eis3, Eis4];
     const kuchen = [Kuchen1, Kuchen2, Kuchen3, Kuchen4];
@@ -158,6 +162,31 @@ export default function Home() {
                     setIsOpen(true);
                 }}
             ></Menu1>
+
+            {showModal && (
+                <Modal
+                    onClick={() => {
+                        console.log("TEST");
+                        setShowModal(false);
+                    }}
+                >
+                    <h2 className="text-primaryColor-400 mb-8 text-3xl lg:text-5xl xl:text-6xl leading-tight tracking-wide font-pantonblack">
+                        Vielen Dank für Ihre Treue in 2023 !
+                    </h2>
+                    <p className="font-pantonsemibold lg:text-base xl:text-xl text-secondaryColor-700 tracking-wide mb-6">
+                        Wir machen eine kleine Pause vom{" "}
+                        <span className="font-pantonbold text-primaryColor-500"> 18. Dezember bis Februar.</span>
+                    </p>
+                    <p className="font-pantonsemibold lg:text-base xl:text-xl text-secondaryColor-700 tracking-wide mb-6">
+                        Wir wünschen Ihnen Frohe Weihnachten und einen guten Start ins neue Jahr.
+                        <br /> Wir hoffen wir sehen uns in 2024 alle gesund wieder !{" "}
+                    </p>
+                    <p className="font-pantonsemibold lg:text-base xl:text-xl text-secondaryColor-700 tracking-wide mb-6">
+                        Ihr Eiscafé Altstadt Team{" "}
+                    </p>
+                </Modal>
+            )}
+
             <div className="w-full col-span-12 relative">
                 <Hero fullHeight={true} colspan="col-span-12"></Hero>
                 <div className="absolute hidden lg:block h-full bg-primaryColor-400 w-2/4 top-0 z-[-1]"></div>
