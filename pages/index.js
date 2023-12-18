@@ -1,5 +1,10 @@
 import Head from "next/head";
 
+import client from "../client";
+
+//SANITY
+import { PortableText } from "@portabletext/react";
+
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -46,8 +51,13 @@ import { BsTelephoneFill } from "react-icons/bs";
 
 import { Modal } from "../components/modal";
 
-export default function Home() {
-    const [showModal, setShowModal] = useState(true);
+export default function Home({ dataHome }) {
+    const [showModal, setShowModal] = useState(null);
+
+    useEffect(() => {
+        console.log(dataHome);
+        setShowModal(dataHome[0].visible);
+    }, [dataHome]);
 
     const slider1Img = [Eiscafe1];
     const eisImg = [Eis1, Eis2, Eis3, Eis4];
@@ -171,19 +181,18 @@ export default function Home() {
                     }}
                 >
                     <h2 className="text-primaryColor-400 mb-8 text-3xl lg:text-5xl xl:text-6xl leading-tight tracking-wide font-pantonblack">
-                        Vielen Dank für Ihre Treue in 2023 !
+                        {dataHome[0].headline}
                     </h2>
-                    <p className="font-pantonsemibold lg:text-base xl:text-xl text-secondaryColor-700 tracking-wide mb-6">
-                        Wir machen eine kleine Pause vom{" "}
-                        <span className="font-pantonbold text-primaryColor-500"> 18. Dezember bis Februar.</span>
-                    </p>
-                    <p className="font-pantonsemibold lg:text-base xl:text-xl text-secondaryColor-700 tracking-wide mb-6">
+                    <div className="font-pantonsemibold popupText lg:text-base xl:text-xl text-secondaryColor-700 tracking-wide mb-6">
+                        <PortableText value={dataHome[0].text} />
+                    </div>
+                    {/* <p className="font-pantonsemibold lg:text-base xl:text-xl text-secondaryColor-700 tracking-wide mb-6">
                         Wir wünschen Ihnen Frohe Weihnachten und einen guten Start ins neue Jahr.
                         <br /> Wir hoffen wir sehen uns in 2024 alle gesund wieder !{" "}
                     </p>
                     <p className="font-pantonsemibold lg:text-base xl:text-xl text-secondaryColor-700 tracking-wide mb-6">
                         Ihr Eiscafé Altstadt Team{" "}
-                    </p>
+                    </p> */}
                 </Modal>
             )}
 
@@ -523,3 +532,18 @@ export default function Home() {
         </MainContainer>
     );
 }
+
+export const getStaticProps = async (context) => {
+    const resHome = await client.fetch(`
+  *[_type == "news"]
+`);
+
+    const dataHome = await resHome;
+
+    return {
+        props: {
+            dataHome,
+        },
+        revalidate: 1, // 10 seconds
+    };
+};
