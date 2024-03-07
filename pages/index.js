@@ -13,6 +13,7 @@ import Hero from "../components/Hero/hero";
 import { Menu1 } from "../components/menues";
 import Swipo from "../components/swiper";
 import Link from "next/link";
+import { CoverImage } from "../components/images";
 //ASSETS
 import LogoLight from "../assets/LogoLight.svg";
 import LogoDark from "../assets/LogoDark.svg";
@@ -186,6 +187,16 @@ export default function Home({ dataHome }) {
                     <div className="font-pantonsemibold popupText lg:text-base xl:text-xl text-secondaryColor-700 tracking-wide mb-6">
                         <PortableText value={dataHome[0].text} />
                     </div>
+                    <CoverImage
+                        key={"normalImage"}
+                        server={true}
+                        src={dataHome[0].image} // Switch based on hover state
+                        mobileSrc={dataHome[0].image}
+                        alt="Cover Background"
+                        style={{ aspectRatio: "16/9" }}
+                        klasse={`  overflow-hidden }`}
+                        className="relative w-full"
+                    />
                     {/* <p className="font-pantonsemibold lg:text-base xl:text-xl text-secondaryColor-700 tracking-wide mb-6">
                         Wir wünschen Ihnen Frohe Weihnachten und einen guten Start ins neue Jahr.
                         <br /> Wir hoffen wir sehen uns in 2024 alle gesund wieder !{" "}
