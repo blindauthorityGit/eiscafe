@@ -51,7 +51,7 @@ const Impressum = () => {
                             <br />
                             <br />
                             Webdesign: <br />
-                            Sabocon.com
+                            <a href="https://www.sabocon.com">Sabocon.com</a>
                         </p>
                     </div>
                 </div>

@@ -1,0 +1,22 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var sliders = [
+        { class: 'slider-one', headline: 'Headline for Slider One' },
+        { class: 'slider-two', headline: 'Headline for Slider Two' },
+        // Add more sliders as needed
+    ];
+
+    sliders.forEach(function(slider) {
+        var sliderElement = document.querySelector('.' + slider.class);
+        if (sliderElement) {
+            var headline = document.createElement('h1');
+            headline.textContent = slider.headline;
+            headline.style.position = 'absolute';
+            headline.style.top = '20px'; // Customize this
+            headline.style.left = '20px'; // Customize this
+            headline.style.zIndex = '100'; // Ensures the headline is above the slider
+            // Add more styles as needed
+
+            sliderElement.prepend(headline);
+        }
+    });
+});
