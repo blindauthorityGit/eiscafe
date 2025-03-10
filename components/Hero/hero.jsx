@@ -10,7 +10,7 @@ import { FloaterOpening } from "../floaters";
 import useBreakpoints from "../functions/useBreakpoints";
 
 //ASSETS
-import HeroBG from "../../assets/heroBG.svg";
+import HeroBG from "../../assets/heroBG.png";
 import HeroMobileBG from "../../assets/mobileBG.jpg";
 
 const Hero = (props) => {

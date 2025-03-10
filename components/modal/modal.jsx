@@ -11,7 +11,7 @@ const Modal = (props) => {
                 >
                     <MdOutlineClose></MdOutlineClose>
                 </div>
-                {props.children}
+                <div>{props.children}</div>
             </div>
             <div className="fixed h-screen w-screen bg-secondaryColor-950 top-0 z-30 opacity-60"></div>
         </>

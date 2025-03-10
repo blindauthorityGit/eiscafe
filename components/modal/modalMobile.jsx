@@ -14,7 +14,7 @@ const ModalMobile = ({ ...props }, ref) => {
             >
                 <MdOutlineClose className="bg-white rounded-full"></MdOutlineClose>
             </div>
-            {props.children}
+            <div>{props.children}</div>
         </div>
     );
 };
